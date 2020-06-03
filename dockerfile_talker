@@ -1,0 +1,8 @@
+FROM ros_base
+
+COPY talker.sh /
+RUN chmod +x talker.sh
+
+ENV ROS_HOSTNAME master
+
+ENTRYPOINT [ "/talker.sh" ]

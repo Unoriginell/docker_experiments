@@ -1,0 +1,6 @@
+FROM ros:noetic-ros-core-focal
+
+RUN apt update && apt install -y ros-noetic-ros-tutorials ros-noetic-common-tutorials iputils-ping
+
+
+ENV ROS_MASTER_URI http://master:11311

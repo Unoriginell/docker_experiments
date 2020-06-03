@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ros_talker:
+    build: .
+    ports:
+      - "5000:5000"
+    ros_listener:
+    image: "redis:alpine"
