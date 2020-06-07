@@ -3,7 +3,7 @@ services:
 
   ros_talker:
     build:
-      context: .
+      context: listener
       dockerfile: dockerfile_talker
     environment:
       - ROS_MASTER_URI=http://ros_talker:11311
@@ -13,7 +13,7 @@ services:
     
   ros_listener:
     build: 
-      context: .
+      context: talker
       dockerfile: dockerfile_listener
     environment:
       - ROS_MASTER_URI=http://ros_talker:11311
